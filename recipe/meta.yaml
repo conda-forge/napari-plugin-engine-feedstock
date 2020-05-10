@@ -1,5 +1,5 @@
 {% set name = "napari-plugin-engine" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 60da74d55be0c115c689d37f2ac4143bc1529e0810362e0f22149f3aeb39dba2
+  sha256: 7f53434753fb0726981c818af11fc2f71907371d348b8a87ce8fc0feeda68f76
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -31,7 +31,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A fork of pluggy - plugin management package'
+  summary: A fork of pluggy - plugin management package
 
   # The remaining entries in this section are optional, but recommended.
   description: |
