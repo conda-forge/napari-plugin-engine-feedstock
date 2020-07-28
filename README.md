@@ -5,7 +5,7 @@ Home: https://github.com/napari/napari-plugin-engine
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A fork of pluggy - plugin management package
 
