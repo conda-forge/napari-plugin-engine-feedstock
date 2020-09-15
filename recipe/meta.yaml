@@ -20,7 +20,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - importlib-metadata >=1.5  # [py<3.8]
+    - importlib-metadata >=1.5  # [py<38]
 
 test:
   imports:
