@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
+    - python
     - importlib-metadata >=1.5  # [py<38]
 
 test:
