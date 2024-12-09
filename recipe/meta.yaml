@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: fa926f869d70e0d652c005661948cd0c7fee5508ae17d437937f34f5287590b3
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - importlib-metadata >=1.5
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - napari_plugin_engine
 
