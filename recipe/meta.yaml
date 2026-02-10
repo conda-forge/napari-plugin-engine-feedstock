@@ -1,17 +1,17 @@
 {% set name = "napari-plugin-engine" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fa926f869d70e0d652c005661948cd0c7fee5508ae17d437937f34f5287590b3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 46829cf02f368c8f2f1aa8b998ec73bcf14a2c1f5c15abd94b82154d7aef510d
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
